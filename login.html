@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js-form-validation.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="sample-registration-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+      .dg1:hover,
+      .dg2:hover,
+      .dg3:hover,
+      .dg4:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <ul style="background-color: black;" class="nav nav-pills nav-fill gap-2 p-1 small  rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">for individuals</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for business</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for universities</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for government</button>
+      </li>
+    </ul>
+    <div class="navi" style="display: flex;justify-content: space-around;">
+      <div>
+        <img src="logo.png">
+      </div>
+      <div>
+        <div class="dropdown" style="margin-top: 30px;">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Explore </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 30px;">
+        <input type="search" id="mySearch" placeholder="search" &euro;>
+        <input type="submit">
+      </div>
+      <div>
+        <div class="dropdown" style="margin-top: 30px;">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Online degrees </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 30px;">
+        <a href="#" style="text-decoration: none; color:black;">Find your career</a>
+      </div>
+      <div style="margin-top: 20px;">
+        <span id="boot-icon" class="bi bi-bell" style="font-size: 29px; opacity: 0.9;"></span>
+      </div>
+      <div class="log" style="display: flex;">
+        <span id="boot-icon" class="bi bi-person-lines-fill" style="font-size: 30px;margin-top: 20px;"></span>
+        <div id="get" style="margin-top: 30px;margin-left: 5px;"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("get").innerHTML = localStorage.getItem("Username");
+    </script>
+    <br><br>
+   <div class="main" style="display: flex;">
+      <div class="chld" width="30%" style="margin-left: 5%;"  >
+        <br>
+        <input type="radio"><a href="week1.html" class="wk1" style="text-decoration:none;color:black;" >week1</a><br><br><br>
+        <input type="radio"><a href="week2.html" class="wk1" style="text-decoration:none;color:black;">week2</a><br><br><br>
+        <input type="radio"><a href="week3.html" class="wk1" style="text-decoration:none;color:black;">week3</a><br><br><br>
+        <input type="radio"><a href="week4.html" class="wk1" style="text-decoration:none;color:black;">week4</a><br><br><br>
+        <input type="radio"><a href="Assignment.html" class="wk1" style="text-decoration:none;color:black;">Assignment</a><br>
+      </div>
+      
+      <div style="margin-left: 15%;">
+        <h1>Introduction to machine learning</h1><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mNB8NlwhAgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="1000" ></iframe>
+      </div>
+
+      
+  </div><br>
+    <div style="margin-left: 30%;"><h1>Let Start the Course</h1></div>
+
+  </body>
+  </html>
