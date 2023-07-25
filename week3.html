@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="sample-registration-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+    <ul style="background-color: black;" class="nav nav-pills nav-fill gap-2 p-1 small  rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">for individuals</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for business</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for universities</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for government</button>
+        </li>
+      </ul>
+      <div class="navi" style="display: flex;justify-content: space-around;">
+        <div>
+          <img src="logo.png">
+        </div>
+        <div>
+          <div class="dropdown" style="margin-top: 30px;">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Explore </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 30px;">
+          <input type="search" id="mySearch" placeholder="search" &euro;>
+          <input type="submit">
+        </div>
+        <div>
+          <div class="dropdown" style="margin-top: 30px;">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Online degrees </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 30px;">
+          <a href="#" style="text-decoration: none; color:black;">Find your career</a>
+        </div>
+        <div style="margin-top: 20px;">
+          <span id="boot-icon" class="bi bi-bell" style="font-size: 29px; opacity: 0.9;"></span>
+        </div>
+        <div class="log" style="display: flex;">
+          <span id="boot-icon" class="bi bi-person-lines-fill" style="font-size: 30px;margin-top: 20px;"></span>
+          <div id="get" style="margin-top: 30px;margin-left: 5px;"></div>
+        </div>
+      </div>
+      <script>
+        document.getElementById("get").innerHTML = localStorage.getItem("Username");
+      </script>
+  <br><br>
+
+
+    <div style="margin-left: 2%;margin-right: 2%;">
+    <h1 align="center" style="color: blue;">Machine Learning Life Cycle</h1><br>
+    Machine learning has given the computer systems the abilities to automatically learn without being explicitly programmed. But how does a machine learning system work? So, it can be described using the life cycle of machine learning. Machine learning life cycle is a cyclic process to build an efficient machine learning project. The main purpose of the life cycle is to find a solution to the problem or project.
+Machine learning life cycle involves seven major steps, which are given below:
+
+Gathering Data<br>
+Data preparation<br>
+Data Wrangling<br>
+Analyse Data<br>
+Train the model<br>
+Test the model<br>
+Deployment<br>
+<h1 style="color: blue;"> Gathering Data</h1>
+. Gathering Data:
+Data Gathering is the first step of the machine learning life cycle. The goal of this step is to identify and obtain all data-related problems.
+
+In this step, we need to identify the different data sources, as data can be collected from various sources such as files, database, internet, or mobile devices. It is one of the most important steps of the life cycle. The quantity and quality of the collected data will determine the efficiency of the output. The more will be the data, the more accurate will be the prediction.
+
+This step includes the below tasks:<br>
+
+Identify various data sources<br>
+Collect data<br>
+Integrate the data obtained from different sources<br>
+By performing the above task, we get a coherent set of data, also called as a dataset. It will be used in further steps.<br>
+<h1 style="color: blue;">Data Preparation</h1>
+Data preparation
+After collecting the data, we need to prepare it for further steps. Data preparation is a step where we put our data into a suitable place and prepare it to use in our machine learning training.
+
+In this step, first, we put all data together, and then randomize the ordering of data.
+
+This step can be further divided into two processes:
+
+<h4 style="color: blue;">Data exploration:</h4>
+It is used to understand the nature of data that we have to work with. We need to understand the characteristics, format, and quality of data.
+A better understanding of data leads to an effective outcome. In this, we find Correlations, general trends, and outliers.
+<h4>Data pre-processing:</h4>
+Now the next step is preprocessing of data for its analysis.<br>
+<h1 style="color: blue;">Data Wrangling</h1><br>
+Data Wrangling
+Data wrangling is the process of cleaning and converting raw data into a useable format. It is the process of cleaning the data, selecting the variable to use, and transforming the data in a proper format to make it more suitable for analysis in the next step. It is one of the most important steps of the complete process. Cleaning of data is required to address the quality issues.
+
+
+It is not necessary that data we have collected is always of our use as some of the data may not be useful. In real-world applications, collected data may have various issues, including:
+<br>
+Missing Values<br>
+Duplicate data<br>
+Invalid data<br>
+Noise<br>
+So, we use various filtering techniques to clean the data.
+<h1 style="color: blue;">Data Analysis</h1>
+Data Analysis
+Now the cleaned and prepared data is passed on to the analysis step. This step involves:<br>
+Selection of analytical techniques<br>
+Building models<br>
+Review the result<br>
+The aim of this step is to build a machine learning model to analyze the data using various analytical techniques and review the outcome. It starts with the determination of the type of the problems, where we select the machine learning techniques such as Classification, Regression, Cluster analysis, Association, etc. then build the model using prepared data, and evaluate the model.
+<br>
+<h1 style="color: blue;">Train Model</h1>,br>
+
+Now the next step is to train the model, in this step we train our model to improve its performance for better outcome of the problem.
+
+We use datasets to train the model using various machine learning algorithms. Training a model is required so that it can understand the various patterns, rules, and, features.
+<br>
+<h1 style="color: blue;">Test Model</h1><br>
+Test Model
+Once our machine learning model has been trained on a given dataset, then we test the model. In this step, we check for the accuracy of our model by providing a test dataset to it.
+
+Testing the model determines the percentage accuracy of the model as per the requirement of project or problem.<br>
+<h1 style="color: blue;">Deployment</h1>
+Deployment
+The last step of machine learning life cycle is deployment, where we deploy the model in the real-world system.
+
+If the above-prepared model is producing an accurate result as per our requirement with acceptable speed, then we deploy the model in the real system. But before deploying the project, we will check whether it is improving its performance using available data or not. The deployment phase is similar to making the final report for a project.
+</div>
+
+</body>
+</html>

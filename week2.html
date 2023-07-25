@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="sample-registration-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+
+    <ul style="background-color: black;" class="nav nav-pills nav-fill gap-2 p-1 small  rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">for individuals</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for business</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for universities</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">for government</button>
+        </li>
+      </ul>
+      <div class="navi" style="display: flex;justify-content: space-around;">
+        <div>
+          <img src="logo.png">
+        </div>
+        <div>
+          <div class="dropdown" style="margin-top: 30px;">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Explore </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 30px;">
+          <input type="search" id="mySearch" placeholder="search" &euro;>
+          <input type="submit">
+        </div>
+        <div>
+          <div class="dropdown" style="margin-top: 30px;">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Online degrees </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 30px;">
+          <a href="#" style="text-decoration: none; color:black;">Find your career</a>
+        </div>
+        <div style="margin-top: 20px;">
+          <span id="boot-icon" class="bi bi-bell" style="font-size: 29px; opacity: 0.9;"></span>
+        </div>
+        <div class="log" style="display: flex;">
+          <span id="boot-icon" class="bi bi-person-lines-fill" style="font-size: 30px;margin-top: 20px;"></span>
+          <div id="get" style="margin-top: 30px;margin-left: 5px;"></div>
+        </div>
+      </div>
+      <script>
+        document.getElementById("get").innerHTML = localStorage.getItem("Username");
+      </script>
+  <br><br>
+
+
+    <h1 align="center" style="color: blue;">Application of machine learning</h1>
+     <div align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oj-Aa6cVYrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     </div><br>
+    <div style="margin-left: 2%;margin-right: 2%;">
+    Applications of Machine learning
+Machine learning is a buzzword for today's technology, and it is growing very rapidly day by day. We are using machine learning in our daily life even without knowing it such as Google Maps, Google assistant, Alexa, etc. Below are some most trending real-world applications of Machine Learning:<br>
+<h1 style="color: blue;">Image Recogination</h1>
+. Image Recognition:
+Image recognition is one of the most common applications of machine learning. It is used to identify objects, persons, places, digital images, etc. The popular use case of image recognition and face detection is, Automatic friend tagging suggestion:
+
+Facebook provides us a feature of auto friend tagging suggestion. Whenever we upload a photo with our Facebook friends, then we automatically get a tagging suggestion with name, and the technology behind this is machine learning's face detection and recognition algorithm.
+
+It is based on the Facebook project named "Deep Face," which is responsible for face recognition and person identification in the picture.<br>
+<h1style="color: blue;">Speech Recogination</h1><br>
+While using Google, we get an option of "Search by voice," it comes under speech recognition, and it's a popular application of machine learning.
+
+Speech recognition is a process of converting voice instructions into text, and it is also known as "Speech to text", or "Computer speech recognition." At present, machine learning algorithms are widely used by various applications of speech recognition. Google assistant, Siri, Cortana, and Alexa are using speech recognition technology to follow the voice instructions.
+<h1 style="color: blue;">Traffic Prediction</h1><br>
+If we want to visit a new place, we take help of Google Maps, which shows us the correct path with the shortest route and predicts the traffic conditions.
+
+It predicts the traffic conditions such as whether traffic is cleared, slow-moving, or heavily congested with the help of two ways:
+
+Real Time location of the vehicle form Google Map app and sensors
+Average time has taken on past days at the same time.
+Everyone who is using Google Map is helping this app to make it better. It takes information from the user and sends back to its database to improve the performance.
+<br>
+<h1 style="color: blue;">product Recommendation</h1><br>
+Machine learning is widely used by various e-commerce and entertainment companies such as Amazon, Netflix, etc., for product recommendation to the user. Whenever we search for some product on Amazon, then we started getting an advertisement for the same product while internet surfing on the same browser and this is because of machine learning.
+
+Google understands the user interest using various machine learning algorithms and suggests the product as per customer interest.
+
+As similar, when we use Netflix, we find some recommendations for entertainment series, movies, etc., and this is also done with the help of machine learning.<br>
+<h1 style="color: blue;">Email Spam wal filtering</h1><br>
+Whenever we receive a new email, it is filtered automatically as important, normal, and spam. We always receive an important mail in our inbox with the important symbol and spam emails in our spam box, and the technology behind this is Machine learning. Below are some spam filters used by Gmail:
+
+Content Filter<br>
+Header filter<br>
+General blacklists filter<br>
+Rules-based filters<br>
+Permission filters<br>
+<h1 style="color: blue;">Medical Diagonosis</h1><br>
+In medical science, machine learning is used for diseases diagnoses. With this, medical technology is growing very fast and able to build 3D models that can predict the exact position of lesions in the brain.
+
+It helps in finding brain tumors and other brain-related diseases easily.
+</div>
+
+</body>
+</html>
