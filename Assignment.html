@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Machine Learning Quiz</title>
+  <style>
+    #timer {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+    }
+
+    #exam-container {
+      border: 2px solid #ccc;
+      padding: 20px;
+    }
+
+    #result-container {
+      border: 2px solid #ccc;
+      padding: 20px;
+      display: none;
+      text-align: center;
+    }
+
+    #result-container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #score {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #restart-button,
+    #download-button {
+      font-size: 18px;
+      padding: 10px 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex;">
+    <img src="logo.png">
+  <h1 align="center" style="margin-left: 34%;color: blue;">Machine Learning Quiz</h1>
+</div>
+
+  <div id="timer"></div>
+
+  <div id="exam-container">
+    <form id="exam-form">
+      <h3>Question 1:</h3>
+      <p>What is the goal of machine learning?</p>
+      <input type="radio" name="q1" value="a">a) To develop algorithms that can learn and make predictions or decisions based on data<br>
+      <input type="radio" name="q1" value="b">b) To analyze and visualize data<br>
+      <input type="radio" name="q1" value="c">c) To automate repetitive tasks<br>
+
+      <h3>Question 2:</h3>
+      <p>Which type of machine learning algorithm is suitable for predicting continuous numerical values?</p>
+      <input type="radio" name="q2" value="a">a) Regression<br>
+      <input type="radio" name="q2" value="b">b) Classification<br>
+      <input type="radio" name="q2" value="c">c) Clustering<br>
+
+      <h3>Question 3:</h3>
+      <p>What is overfitting in machine learning?</p>
+      <input type="radio" name="q3" value="a">a) When a model performs well on the training data but fails to generalize to new data<br>
+      <input type="radio" name="q3" value="b">b) When a model is too simple and fails to capture the underlying patterns in the data<br>
+      <input type="radio" name="q3" value="c">c) When a model is too complex and overcomplicates the data<br>
+
+      <h3>Question 4:</h3>
+      <p>Which evaluation metric is commonly used for classification problems?</p>
+      <input type="radio" name="q4" value="a">a) Accuracy<br>
+      <input type="radio" name="q4" value="b">b) Mean Squared Error (MSE)<br>
+      <input type="radio" name="q4" value="c">c) R-squared<br>
+
+      <h3>Question 5:</h3>
+      <p>What is the purpose of feature scaling in machine learning?</p>
+      <input type="radio" name="q5" value="a">a) To normalize the range of features and ensure they have similar scales<br>
+      <input type="radio" name="q5" value="b">b) To remove outliers from the dataset<br>
+      <input type="radio" name="q5" value="c">c) To handle missing data<br>
+
+      <h3>Question 6:</h3>
+      <p>Which algorithm is commonly used for decision tree learning?</p>
+      <input type="radio" name="q6" value="a">a) C4.5<br>
+      <input type="radio" name="q6" value="b">b) K-means<br>
+      <input type="radio" name="q6" value="c">c) Naive Bayes<br>
+
+      <br>
+      <input type="button" value="Submit" onclick="submitExam()">
+    </form>
+  </div>
+
+  <div id="result-container">
+    <h2>Result</h2>
+    <p id="score"></p>
+    <p id="message"></p>
+    <button id="restart-button" onclick="restartTest()">Restart Test</button> 
+   
+    <!-- <button onclick="location.reload()">Restart</button> -->
+    <button id="download-button" onclick="downloadCertificate()" style="display: none;">Download Certificate</button>
+  </div>
+
+  <script>
+    var timerElement = document.getElementById("timer");
+    var examContainer = document.getElementById("exam-container");
+    var resultContainer = document.getElementById("result-container");
+    var scoreElement = document.getElementById("score");
+    var messageElement = document.getElementById("message");
+    var restartButton = document.getElementById("restart-button");
+    var downloadButton = document.getElementById("download-button");
+    var totalQuestions = 6;
+    var answers = {
+      q1: "a",
+      q2: "a",
+      q3: "a",
+      q4: "a",
+      q5: "a",
+      q6: "a"
+    };
+    var score = 0;
+    var currentQuestion = 1;
+    var timer;
+    var timeLimit = 900; // 15 minutes in seconds
+
+    function startTimer() {
+      var minutes, seconds;
+
+      function updateTimer() {
+        minutes = Math.floor(timeLimit / 60);
+        seconds = timeLimit % 60;
+
+        if (timeLimit < 0) {
+          clearInterval(timer);
+          submitExam();
+        } else {
+          timerElement.innerHTML = "Time Remaining: " + minutes + "m " + seconds + "s";
+          timeLimit--;
+        }
+      }
+
+      updateTimer();
+      timer = setInterval(updateTimer, 1000);
+    }
+
+    function submitExam() {
+      clearInterval(timer);
+      timerElement.style.display = "none";
+      examContainer.style.display = "none";
+
+      calculateScore();
+      displayResult();
+    }
+
+    function calculateScore() {
+      for (var i = 1; i <= totalQuestions; i++) {
+        var questionName = "q" + i;
+        var selectedOption = document.querySelector('input[name="' + questionName + '"]:checked').value;
+
+        if (selectedOption === answers[questionName]) {
+          score++;
+        }
+      }
+    }
+
+    function displayResult() {
+      scoreElement.innerHTML = "You scored " + score + " out of " + totalQuestions;
+
+      if (score >= 6) {
+        messageElement.innerHTML = "Congratulations! You passed the test.";
+        downloadButton.style.display = "block";
+      } else {
+        messageElement.innerHTML = "You must score at least 6 to pass the test.";
+        restartButton.style.display = "block";
+      }
+
+      resultContainer.style.display = "block";
+    }
+
+    function restartTest() {
+      resultContainer.style.display = "none";
+      examContainer.style.display = "block";
+      document.getElementById("exam-form").reset();
+      score = 0;
+      currentQuestion = 1;
+      startTimer();
+    }
+
+    function downloadCertificate() {
+      // Implement certificate download logic here
+      alert("Certificate downloaded!");
+      window.open("cer.html");
+    }
+
+    startTimer();
+  </script>
+</body>
+</html>
